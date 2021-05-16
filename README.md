@@ -10,7 +10,7 @@ A Quick bodge automate script for reporting
 javascript:(() => window.prompt("Copy to clipboard: Ctrl+C, Enter", document.querySelector('.wnPUne.N0PJ8e').innerText))();
 ```
 
-2. Right click at [main.ahk](./main.ahk) then click `run as administrator`
+2. Right click at [main.ahk](./main.ahk) or [report-meets-attendances.exe](https://github.com/thaiminhpv/report-meets-attendances/releases/download/v1.1/report-meets-attendances.exe) then click `run as administrator`
 
 ## Shortcuts
 
