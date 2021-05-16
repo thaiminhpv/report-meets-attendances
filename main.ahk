@@ -1,14 +1,14 @@
+; Ctrl+Shift+Alt+T : mo lenh
+; Windows + / : tat lenh
+; Cua so phai 100% view
+; Phai save paint 1 lan truoc (Download), thu muc luu ko co anh
+; De thanh bookmark: Ctrl+Shift+B
+
+;===============================
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
-
-; Ctr+Shi+Alt+T : mo lenh, Window+/ : tat lenh
-; Cua so phai 100% view, Paint phai o vi tri 7 (Bam Window+7 test)
-; Phai save paint 1 lan truoc (Download), thu muc luu ko co anh
-; De thanh bookmark: CTr+Shi+B
-
-
 
 +!^t::
 Loop, 50 {
@@ -51,7 +51,7 @@ Loop, 50 {
 			MsgBox, Paint has already Exist
 			break
 		}
-	Send, #7 ;paint
+    Run, "mspaint.exe"
 	Sleep, 1000
 	Send, {CtrlDown}v{CtrlUp}
 	Sleep, 300
@@ -62,15 +62,14 @@ Loop, 50 {
 	WinActivate, paint
 	Send, {AltDown}{F4}{AltUp}
 	Sleep, 100
-+!^u::
 	;lay so hoc vien
 	WinActivate, Chrome
 	Sleep, 4000
 	Click, 45, 90
 	Sleep, 4000
-;return
-IfWinExist, Untitled - Paint
-	{
+
+    IfWinExist, Untitled - Paint
+        {
 			MsgBox, An error occur
 			break
 		}
@@ -85,8 +84,8 @@ IfWinExist, Untitled - Paint
 	diem := clipboard - 2
 	if diem is not integer 
 	{
-			MsgBox, An error occur
-			break
+        MsgBox, An error occur
+        break
 	}
 	Send, %diem%
 	Sleep, 300
