@@ -4,13 +4,13 @@ A Quick bodge automate script for reporting
 
 ## How to use
 
-Add this script as a bookmarklet at most outer left bookmarks bar
+1. Add this script as a bookmarklet at most outer left bookmarks bar
 
 ```javascript
-javascript:(() => {})()
+javascript:(() => window.prompt("Copy to clipboard: Ctrl+C, Enter", document.querySelector('.wnPUne.N0PJ8e').innerText))();
 ```
 
-Right click at [main.ahk](./main.ahk) then click `run as administrator`
+2. Right click at [main.ahk](./main.ahk) then click `run as administrator`
 
 ## Shortcuts
 
