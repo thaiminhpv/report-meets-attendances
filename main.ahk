@@ -44,13 +44,13 @@ Loop, 100 {
 	Sleep, 80
 	Send, {CtrlDown}d{CtrlUp}
 	Sleep, 80
-	Click, 1000, 447 ; 437
+	Click, 1000, 502 ; 437
 	Sleep, 4000
 	;chup anh man hinh
 	Send, {PrintScreen}
 	IfWinExist, Untitled - Paint
 		{
-			MsgBox, Paint has already Exist
+			MsgBox, Paint has already Existed
 			break
 		}
     Run, "mspaint.exe"
@@ -66,13 +66,13 @@ Loop, 100 {
 	Sleep, 100
 	;lay so hoc vien
 	WinActivate, Chrome
-	Sleep, 4000
+	Sleep, 200
 	Click, 45, 90
-	Sleep, 4000
+	Sleep, 1000
 
     IfWinExist, Untitled - Paint
         {
-			MsgBox, Can't find Paint
+			MsgBox, An error occurred
 			break
 		}
 	Send, {CtrlDown}c{CtrlUp}
@@ -132,14 +132,14 @@ Loop, 100 {
 	Sleep, 80
 	Send, {CtrlDown}d{CtrlUp}
 	Sleep, 80
-	Click, 1000, 447 ; 437
+	Click, 1000, 502 ; 437
 	Sleep, 4000
 	;KHONG chup anh man hinh
 	;lay so hoc vien
 	WinActivate, Chrome
 	Sleep, 200
 	Click, 45, 90
-	Sleep, 3000
+	Sleep, 1000
 
 	Send, {CtrlDown}c{CtrlUp}
 	Sleep, 800
