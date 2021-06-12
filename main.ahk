@@ -63,7 +63,7 @@ Loop, 100 {
 	Send, {Enter}
 	WinActivate, paint
 	Send, {AltDown}{F4}{AltUp}
-	Sleep, 100
+	Sleep, 1000
 	;lay so hoc vien
 	WinActivate, Chrome
 	Sleep, 200
