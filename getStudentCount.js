@@ -1,1 +1,1 @@
-window.prompt("Copy to clipboard: Ctrl+C, Enter", document.querySelector('.wnPUne.N0PJ8e').innerText);
+window.prompt("Copy to clipboard: Ctrl+C, Enter", document.getElementsByClassName('uGOf1d')[0].innerText);

@@ -11,7 +11,7 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 +!^t::
-Loop, 50 {
+Loop, 100 {
 	WinActivate, Chrome
 	;copy png name -> x
 	Loop, 4 {
@@ -38,11 +38,11 @@ Loop, 50 {
 	Send, {Enter}
 	Sleep, 5000
 	;tat mic va camera va vao phong
-	Click, 418, 597
+	Send, {CtrlDown}e{CtrlUp}
 	Sleep, 80
-	Click, 494, 597
+	Send, {CtrlDown}d{CtrlUp}
 	Sleep, 80
-	Click, 1000, 437
+	Click, 1000, 447 ; 437
 	Sleep, 4000
 	;chup anh man hinh
 	Send, {PrintScreen}
@@ -70,7 +70,7 @@ Loop, 50 {
 
     IfWinExist, Untitled - Paint
         {
-			MsgBox, An error occur
+			MsgBox, Can't find Paint
 			break
 		}
 	Send, {CtrlDown}c{CtrlUp}
@@ -84,7 +84,7 @@ Loop, 50 {
 	diem := clipboard - 2
 	if diem is not integer 
 	{
-        MsgBox, An error occur
+        MsgBox, Can't read number of Students
         break
 	}
 	Send, %diem%
