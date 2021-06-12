@@ -14,7 +14,8 @@ javascript:(() => window.prompt("Copy to clipboard: Ctrl+C, Enter", document.get
 
 ## Shortcuts
 
-- `Ctrl + Shift + Alt + T` : Start script
+- `Ctrl + Shift + Alt + T` : Start script count students and capture
+- `Ctrl + Shift + Alt + U` : Start script count students only
 - `Windows + /` : Stop script
 
 ## Note
