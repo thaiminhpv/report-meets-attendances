@@ -37,6 +37,8 @@ Loop, 100 {
 	Sleep, 3000
 	; thoat khoi phong
 	Send, {CtrlDown}w{CtrlUp}
+	Sleep, 120
+	Send, {Down}
 }
 return
 
