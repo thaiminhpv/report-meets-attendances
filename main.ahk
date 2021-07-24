@@ -15,12 +15,19 @@ join_location := 502 ; 437
 
 ; Threaten teacher only
 +!^u::
+previous_room := ""
 Loop, 100 {
 	WinActivate, Chrome
 	Sleep, 140
 	;Copy link room at sheet
 	Send, {CtrlDown}c{CtrlUp}
 	Sleep, 140
+	If previous_room == clipboard {
+		MsgBox, Done
+		return
+	}
+	previous_room := clipboard
+	Sleep, 50
 	Send, {CtrlDown}t{CtrlUp}
 	Sleep, 200
 	Send, {CtrlDown}v{CtrlUp}
