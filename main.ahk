@@ -22,7 +22,7 @@ Loop, 100 {
 	;Copy link room at sheet
 	Send, {CtrlDown}c{CtrlUp}
 	Sleep, 140
-	If previous_room == clipboard {
+	If (previous_room == clipboard) {
 		MsgBox, Done
 		return
 	}
